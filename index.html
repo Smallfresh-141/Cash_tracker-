@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0f766e">
+<title>Cash Tracker - 197 Pays</title>
+<link rel="manifest" href="manifest.json">
+<style>
+  body { font-family: sans-serif; background: #f5f5f5; margin: 0; padding: 12px; }
+  h1 { background: #0f766e; color: #fff; padding: 14px; border-radius: 12px; text-align: center; font-size: 22px; margin: 0 0 4px; }
+  .card { background: #fff; padding: 14px; border-radius: 12px; margin: 10px 0; }
+  label { display: block; margin-top: 6px; font-weight: bold; }
+  input, select { width: 100%; padding: 12px; margin: 6px 0; border-radius: 8px; border: 1px solid #ddd; box-sizing: border-box; font-size: 16px; }
+  button { background: #0f766e; color: #fff; border: 0; padding: 14px; width: 100%; border-radius: 10px; font-size: 16px; font-weight: bold; cursor: pointer; }
+  .ligne { display: flex; align-items: center; justify-content: space-between; gap: 8px; border-bottom: 1px solid #eee; padding: 8px 0; }
+  .ligne span { flex: 1; word-break: break-word; }
+  .suppr { width: auto; padding: 6px 10px; background: #dc2626; font-size: 14px; }
+  .msg { color: green; font-weight: bold; min-height: 1.2em; }
+  .erreur { color: #dc2626; }
+  h2 { font-size: 20px; word-break: break-word; }
+</style>
+</head>
+<body>
+
+<h1>CASH TRACKER<br><small>197 Pays - International</small></h1>
+
+<div class="card">
+  <label for="pays">🌍 Pays / Country</label>
+  <select id="pays"></select>
+</div>
+
+<div class="card">
+  <h2 id="total"></h2>
+  <p id="best"></p>
+  <p>Rappel : Dimanche 18h - N'oublie pas de noter tes gains !</p>
+</div>
+
+<div class="card">
+  <h3>➕ Ajouter un gain</h3>
+  <form id="form" autocomplete="off">
+    <label for="montant">Montant</label>
+    <input id="montant" type="number" inputmode="decimal" min="0" step="any" placeholder="Ex : 150000">
+    <label for="source">Source</label>
+    <inpu
